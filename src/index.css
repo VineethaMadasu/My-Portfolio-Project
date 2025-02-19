@@ -1,0 +1,154 @@
+/* Reset default margins and prevent clipping */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background: whitesmoke center center fixed;
+  background-size: cover; /* Ensure the image covers the viewport */
+  color: white;
+}
+
+/* Ensure consistent box sizing across elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Utility Classes for Flexbox */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* Make Images Responsive */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Home Section Styles */
+.home-section {
+  text-align: center; /* Center content */
+  padding: 2rem 1rem;
+}
+
+.home-section img {
+  width: 80%;
+  max-width: 300px; /* Limit size for responsiveness */
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto;
+  display: block;
+}
+
+/* Section Overlay */
+section {
+  position: relative;
+  z-index: 1; /* Keeps content above the overlay */
+  color: white;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  
+}
+
+section > * {
+  position: relative;
+  z-index: 2; /* Keeps content above overlay */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Footer Social Links */
+.social-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-links a:hover {
+  color: #ff5722; /* Hover effect */
+  transform: scale(1.1); /* Slight scaling */
+}
+
+@media (max-width: 768px) {
+  .social-links a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links a {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,151 @@
+/* Experience Section */
+.experience {
+  padding: 6rem 2rem;
+  text-align: center;
+  padding-top: 100px;
+  color: #333;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+/* Timeline Layout */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 1200px;
+  width:100%;
+  margin: 0 auto;
+}
+
+/* Timeline Item */
+.timeline-item {
+  display: flex;
+  align-items: left;
+  width: 100%;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+/* Timeline Logo */
+.timeline-logo {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-logo img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  align-items: center;
+}
+
+/* Timeline Line */
+.timeline-line {
+  width: 2px;
+  height: 100%;
+  background: #0e0e0e;
+  position: absolute;
+  left: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Timeline Content */
+.timeline-content {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  text-align: left;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-left: 2rem;
+  width: 80%; /* Increase width */
+  max-width: 1000px; /* Set a max width */
+  position: relative;
+}
+
+.timeline-content::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 10px;
+  border-width: 12px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+
+/* Experience Title */
+.experience-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #002b5b;
+}
+
+/* Company Name */
+.company-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 0 rem;
+}
+
+/* Duration & Location */
+.experience-duration {
+  font-size: 1.2rem;
+  color: #181717;
+  margin-bottom: 0rem;
+}
+
+.experience-description {
+  font-size: 1.2rem; /* Increase readability */
+  line-height: 1.5; /* Add more spacing */
+  color: #444;
+}
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .timeline-logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .timeline-line {
+    display: none;
+  }
+
+  .timeline-content {
+    margin-left: 0;
+    width: 90%;
+    max-width: 1100px;
+    text-align: center;
+  }
+
+  .timeline-content::before {
+    display: none;
+  }
+}

@@ -1,0 +1,109 @@
+/* Base styles for the Contact section */
+.contact {
+    padding: 5rem 2rem;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5%;
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.contact-info {
+    text-align: center;
+    max-width: 1000px;
+    background: transparent;
+    padding: 2rem;
+}
+
+.contact-info h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.contact-info p {
+    font-size: 1.8rem;
+    color: black;
+    line-height: 1.8;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    font-size: 2rem;
+    color:black;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2) rotate(10deg);
+    color: #ff7a18; /* Orange highlight */
+}
+
+.contact-icon {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+    .contact {
+        padding: 4rem 1rem;
+    }
+
+    .contact-info h2 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+
+    .contact-info p {
+        font-size: 1.5rem; /* Smaller paragraph text */
+        line-height: 1.5; /* Adjust spacing for readability */
+    }
+
+    .social-links a {
+        font-size: 1.8rem; /* Smaller icon size */
+        gap: 1rem; /* Less gap between icons */
+    }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 480px) {
+    .contact {
+        padding: 3rem 1rem;
+    }
+
+    .contact-info h2 {
+        font-size: 2rem; /* Smaller heading size */
+    }
+
+    .contact-info p {
+        font-size: 1.2rem; /* Smaller paragraph text */
+        line-height: 1.4;
+    }
+
+    .social-links {
+        gap: 1rem; /* Reduce space between icons */
+    }
+
+    .social-links a {
+        font-size: 1.5rem; /* Smaller icons for mobile */
+    }
+}

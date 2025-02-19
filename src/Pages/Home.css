@@ -1,0 +1,223 @@
+/* Home Section Styles */
+.home {
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column; /* Stack for mobile view */
+  align-items: center;
+  justify-content: flex-start; /* Start content below navbar */
+  padding: 8rem 2rem; /* Add enough padding to account for navbar and spacing */
+  color: black;
+  text-align: center;
+  position: relative; /* Ensure proper stacking with z-index */
+  z-index: 1;
+}
+
+/* Home Container */
+.home-container {
+  display: flex;
+  flex-direction: row; /* Desktop: Side-by-side layout */
+  justify-content: space-between; /* Space between image and text */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap; /* No wrapping for desktop view */
+}
+
+/* Text Section */
+.home-text {
+  flex: 1; /* Take up available space */
+  text-align: left; /* Align text to the left for desktop */
+  margin-right: 2rem; /* Add spacing between text and image */
+}
+
+.home-text h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.home-text p {
+  margin: 1rem 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/* Highlighted Text */
+.highlight {
+  background: linear-gradient(90deg, #c179d9, #d92262);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.highlight2 {
+  background: linear-gradient(90deg, #78358f, #ff3e80);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+/* Home Image */
+.home-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 400px; /* Limit image size */
+  margin-bottom: 1rem;
+}
+
+.home-image img {
+  width: 300px; /* Force a square width */
+  height: 300px; /* Force a square height */
+  border-radius: 50%; /* Circular image */
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  object-fit: cover; /* Ensures the image content is centered and cropped */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.home-image img:hover {
+  transform: scale(1.1); /* Slight zoom on hover */
+  box-shadow: 0px 6px 15px rgba(16, 15, 15, 0.8); /* Enhance hover effect */
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 2rem;
+  font-size: 1.7rem;
+  display: flex;
+  flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+  justify-content: center; /* Center align buttons */
+  gap: 1rem; /* Add gap between buttons */
+  z-index: 2; /* Ensure it stays above overlapping content */
+}
+
+.buttons .btn {
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  background: linear-gradient(45deg, #ff5e57, #ff7a18);
+  color: black;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer; /* Ensures the cursor changes to pointer */
+  pointer-events: auto; /* Makes sure the button is clickable */
+  display: inline-block; /* Prevents issues with block elements overlapping */
+  position: relative; /* For z-index stacking control */
+  z-index: 2; /* Ensures proper visibility above other elements */
+}
+
+.buttons .btn:hover {
+  box-shadow: 0px 4px 10px rgba(255, 94, 87, 0.5);
+  transform: translateY(-3px);
+}
+
+.buttons .btn.outline {
+  background: transparent;
+  border: 2px solid rgb(9, 9, 9);
+  color: black;
+}
+
+.buttons .btn.outline:hover {
+  background: white;
+  color: black;
+}
+
+/* Responsive Design */
+
+/* Tablet View */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align text */
+    padding: 6rem 1rem; /* Reduce padding */
+  }
+
+  .home-container {
+    flex-direction: column; /* Stack content vertically */
+    align-items: center;
+  }
+
+  .home-text {
+    margin: 0 0 1.5rem;
+    text-align: center; /* Center align text for smaller screens */
+  }
+
+  .home-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .home-image {
+    max-width: 300px;
+    margin: 1rem 0;
+    order: -1; /* Move the image above the text */
+  }
+
+  
+  .home-image img {
+    width: 250px;
+    position: relative;
+  
+    height: 20px; /* Reduce image size for smaller screens */
+  }
+
+  .buttons .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+}
+
+/* Mobile View: Image First */
+@media (max-width: 480px) {
+  .home-text h1 {
+    font-size: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .highlight .typewriter {
+    font-size: 1.5rem;
+  }
+  .home-image img {
+    width: 200px;
+ 
+    position: relative;
+    height: 200px; /* Further reduce image size */
+  }
+
+  .buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    z-index: 10; /* Make sure it's above other elements */
+    position: relative;
+  }
+
+  .buttons .btn {
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #ff5e57, #ff7a18);
+    color: white;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer; /* Ensures the cursor changes to pointer */
+    position: relative;
+    z-index: 20; /* Ensure it stays clickable */
+  }
+
+  .buttons .btn:hover {
+    box-shadow: 0px 4px 10px rgba(255, 94, 87, 0.5);
+    transform: translateY(-3px);
+  }
+}
