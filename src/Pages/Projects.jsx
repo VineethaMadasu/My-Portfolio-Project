@@ -38,7 +38,7 @@ const Projects = () => {
       skills: ["Python", "Regression", "Google Colab"], // Skills for this project
     },
     {
-      title: " Predicting weather Conditions",
+      title: " Predicting Weather Conditions",
       description:
         "Built a machine learning system to classify weather conditions Sunny,Rainy,Cloudy using Random Forest.",
       link: "https://www.linkedin.com/in/vineetha-madasu/details/projects/",
