@@ -49,7 +49,7 @@ const Home = () => {
           <div className="buttons">
             
             <motion.a
-              href="/My-Portfolio-Project/Vineetha_Madasu_SDE.pdf"
+              href="/Vineetha_Madasu_SDE.pdf"
               className="btn outline"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
