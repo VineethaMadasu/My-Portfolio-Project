@@ -47,17 +47,6 @@ const Home = () => {
             impactful solutions and grow.
           </p>
           <div className="buttons">
-            
-            <motion.a
-              href="/Vineetha_Madasu_SDE.pdf"
-              className="btn outline"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Resume
-            </motion.a>
           </div>
         </motion.div>
 
